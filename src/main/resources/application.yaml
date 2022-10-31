@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+person:
+  last-name: julin${random.uuid} #随即占位符 松散绑定 last-name -- lastName
+  age: ${random.int} #随机值
+  happy: true
+  birth: 1998/03/14
+  maps: {k1: v1, k2: v2}
+  hello: happy
+  lists:
+    - code
+    - music
+    - girl
+  dog:
+    name: ${person.hello:hello}_旺财 #不存在就为旺财
+    age: 3
+
